@@ -1,16 +1,16 @@
 = Install K3S in a server
 
-You can install Nuvolaris as xref:install-server.adoc[describe here] and you do not need to install any Kubernetes in it, as it is installed as part of the procedure. In this case it installs https://k3s.io[K3S].
+You can install Nuvolaris as xref:install-server.adoc[described here] and you do not need to install any Kubernetes, as it is installed as part of the procedure. In this case it installs https://k3s.io[K3S].
 
 Or you can <<install-k3s, install K3S in advance>>, and then proceed xref:configure.adoc[configuring] and then installing Nuvolaris xref:install-cluster.adoc[as in any other Kubernetes cluster].
 
 [#installing-k3s]
-== Installing K3S in a server
+== Install K3S in a server
 
 Before installing ensure you have xref:prereq-server.adoc[satified the prerequisites], most notably:
 
 . you know the **IP address or DNS name**
-. you server operating system satisfies the https://docs.k3s.io/installation/requirements[K3S requiements]
+. you server operating system satisfies the https://docs.k3s.io/installation/requirements[K3S requirements]
 . you have passwordless access with ssh
 . you have an user with passwordless sudo rights
 . you have opened the port 6443 in the firewall
@@ -18,12 +18,12 @@ Before installing ensure you have xref:prereq-server.adoc[satified the prerequis
 Then you can use the following subcommand to install in the server:
 
 ----
-nuv cloud k3s create SERVER=<server> USERNAME=<usernam>
+nuv cloud k3s create SERVER=<server> USERNAME=<username>
 ----
 
 where `<server>` is the **IP address or DNS name** to access the server, and `<username>` is the user you use to access the server.
 
-Those informations should have been provided when provisioning the server.
+Those pieces of information should have been provided when provisioning the server.
 
 [IMPORTANT]
 ====
